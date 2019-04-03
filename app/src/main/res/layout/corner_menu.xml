@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="140dp"
+    android:layout_height="140dp"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentRight="true">
+
+
+    <RelativeLayout
+        android:id="@+id/cornerMenuOpenRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/corner_menu_open" />
+
+        <ImageView
+            android:id="@+id/settingImageView"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/icon_setting" />
+
+        <ImageView
+            android:id="@+id/calendarImageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="63dp"
+            android:layout_marginTop="33dp"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/icon_calendar" />
+
+        <ImageView
+            android:id="@+id/shoppingBagImageView"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="27dp"
+            android:layout_marginTop="60dp"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/icon_shopping_bag" />
+
+        <ImageView
+            android:id="@+id/personalImageView"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="102dp"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/icon_personal" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/showCornerMenuImageView"
+        android:layout_width="91dp"
+        android:layout_height="95dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/corner_menu_close"
+        android:visibility="visible"/>
+
+</RelativeLayout>

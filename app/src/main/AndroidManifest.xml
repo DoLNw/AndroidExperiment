@@ -8,6 +8,23 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity
+            android:name=".SettingActivity"
+            android:label="@string/title_activity_setting"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".RegisterActivity"
+            android:label="@string/title_activity_register"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".PersonalActivity" />
+        <activity android:name=".ChangePasswordActivity" />
+        <activity android:name=".MyActivity" />
+        <activity android:name=".UserAddressListActivity" />
+        <activity android:name=".FavoriteActivity" />
+        <activity android:name=".UserCalendarActivity" />
+        <activity android:name=".UpdateActivity" />
+        <activity android:name=".AboutActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
