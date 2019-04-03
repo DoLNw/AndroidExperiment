@@ -15,6 +15,6 @@ public class App extends Application {
         user = new User();
         user.id = 1;
         user.name = "test";
-        user.mobileToken = "ABCDEFGH";
+        user.mobileToken = "test";
     }
 }

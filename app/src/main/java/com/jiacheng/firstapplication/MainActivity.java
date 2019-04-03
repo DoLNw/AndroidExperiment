@@ -47,18 +47,18 @@ public class MainActivity extends AppCompatActivity {
 
     boolean checkLogin() {
         App app = (App) getApplication();
-        if (app.user == null || app.user.mobileToken == null) {
-            Dialogs.showSimpleDialog(this, "登录后才能继续操作，您现在登录吗？", true,
-                    new Dialogs.OnOkListener() {
-                        @Override
-                        public void onOk() {
-                            Intent intent = new Intent(getApplicationContext(),
-                                    LoginActivity.class);
-                            startActivity(intent);
-                        }
-                    });
-            return false;
-        }
+//        if (app.user == null || app.user.mobileToken == null) {
+//            Dialogs.showSimpleDialog(this, "登录后才能继续操作，您现在登录吗？", true,
+//                    new Dialogs.OnOkListener() {
+//                        @Override
+//                        public void onOk() {
+//                            Intent intent = new Intent(getApplicationContext(),
+//                                    LoginActivity.class);
+//                            startActivity(intent);
+//                        }
+//                    });
+//            return false;
+//        }
         return true;
     }
 
@@ -181,8 +181,9 @@ public class MainActivity extends AppCompatActivity {
         personalImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!checkLogin())
+                if (!checkLogin()) {
                     return;
+                }
                 Intent intent = new Intent(getApplicationContext(), PersonalActivity.class);
                 startActivity(intent);
             }
