@@ -3,8 +3,8 @@ package com.jiacheng.firstapplication.model;
 public class GiftStyle {
     public int id;
     public String name;
-    public String price;
-    public String discount;
+    public int price;
+    public int discount;
     public String pic1;
     public String pic2;
     public String pic3;

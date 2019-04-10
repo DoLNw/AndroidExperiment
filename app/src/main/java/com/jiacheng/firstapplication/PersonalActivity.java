@@ -38,10 +38,10 @@ public class PersonalActivity extends BaseActivity {
         scanButton = findViewById(R.id.scanButton);
 
         App app = (App) getApplication();
-//        if (app.user == null || StringUtils.isEmpty(app.user.mobileToken))
-//            quitView.setVisibility(View.GONE);
-//        else
-        quitView.setVisibility(View.VISIBLE);
+        if (app.user == null || StringUtils.isEmpty(app.user.mobileToken))
+            quitView.setVisibility(View.GONE);
+        else
+            quitView.setVisibility(View.VISIBLE);
 
         myInfoButton.setOnClickListener(new OnClickListener() {
             @Override

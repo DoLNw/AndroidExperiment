@@ -2,7 +2,7 @@ package com.jiacheng.firstapplication.model;
 
 import java.util.ArrayList;
 
-public class Gift<arrayli> {
+public class Gift {
     public int id;
     public String name;
     public String remark;

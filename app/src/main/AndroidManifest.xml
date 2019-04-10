@@ -3,15 +3,20 @@
     package="com.jiacheng.firstapplication">
 
     <application
+        android:name=".App"
         android:allowBackup="true"
         android:icon="@drawable/logo1"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".UserAddressActivity"></activity>
+        <activity android:name=".StrategyActivity" />
+        <activity android:name=".GiftActivity" />
+        <activity android:name=".ListLevel2Activity" />
         <activity
             android:name=".SettingActivity"
             android:label="@string/title_activity_setting"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".RegisterActivity"
             android:label="@string/title_activity_register"

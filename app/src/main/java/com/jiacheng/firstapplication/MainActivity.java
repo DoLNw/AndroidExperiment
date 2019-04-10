@@ -47,18 +47,18 @@ public class MainActivity extends AppCompatActivity {
 
     boolean checkLogin() {
         App app = (App) getApplication();
-//        if (app.user == null || app.user.mobileToken == null) {
-//            Dialogs.showSimpleDialog(this, "登录后才能继续操作，您现在登录吗？", true,
-//                    new Dialogs.OnOkListener() {
-//                        @Override
-//                        public void onOk() {
-//                            Intent intent = new Intent(getApplicationContext(),
-//                                    LoginActivity.class);
-//                            startActivity(intent);
-//                        }
-//                    });
-//            return false;
-//        }
+        if (app.user == null || app.user.mobileToken == null) {
+            Dialogs.showSimpleDialog(this, "登录后才能继续操作，您现在登录吗？", true,
+                    new Dialogs.OnOkListener() {
+                        @Override
+                        public void onOk() {
+                            Intent intent = new Intent(getApplicationContext(),
+                                    LoginActivity.class);
+                            startActivity(intent);
+                        }
+                    });
+            return false;
+        }
         return true;
     }
 

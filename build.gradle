@@ -20,7 +20,6 @@ allprojects {
         google()
         jcenter()
         maven { url "htps//maven.google.com" }
-        
     }
 }
 

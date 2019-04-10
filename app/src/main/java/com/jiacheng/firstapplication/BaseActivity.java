@@ -1,7 +1,10 @@
 package com.jiacheng.firstapplication;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -9,6 +12,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.io.InputStream;
 
 /**
  * Activity父类，包含标题栏和右下角操作区。
@@ -159,6 +164,7 @@ public abstract class BaseActivity extends Activity {
      * 只是检查是否保存了mobileToken，没有到服务器验证
      */
     public boolean checkLogin() {
+
         App app = (App) getApplication();
         if (app.user == null || app.user.mobileToken == null) {
             Dialogs.showSimpleDialog(this, "登录后才能继续操作，您现在登录吗？", true,
@@ -173,5 +179,12 @@ public abstract class BaseActivity extends Activity {
             return false;
         }
         return true;
+    }
+
+    public static Bitmap readBitMapFromResource(Context context, int resID) {
+        BitmapFactory.Options opt = new BitmapFactory.Options();
+        opt.inPreferredConfig = Bitmap.Config.RGB_565;
+        InputStream is = context.getResources().openRawResource(resID);
+        return BitmapFactory.decodeStream(is, null, opt);
     }
 }
