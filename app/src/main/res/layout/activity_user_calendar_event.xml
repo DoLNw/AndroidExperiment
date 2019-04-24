@@ -1,0 +1,202 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_body"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:gravity="center" >
+
+    <include
+        android:id="@+id/titleBarRelativeLayout"
+        layout="@layout/title_bar" />
+
+    <RelativeLayout
+        android:id="@+id/bottomRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/title_bottom"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/saveButton"
+            style="@style/button"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:text="保存" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleBarRelativeLayout"
+        android:layout_above="@id/bottomRelativeLayout" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <EditText
+                android:id="@+id/titleEditText"
+                style="@style/text1"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/background_edit"
+                android:gravity="left"
+                android:hint="请输入事件内容"
+                android:padding="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="事件时间：" />
+
+                <Button
+                    android:id="@+id/actionTimeButton"
+                    style="@style/button"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="9999-99-99 99:99"
+                    android:textColor="@color/selected"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/title_bottom" />
+
+            <LinearLayout
+                android:id="@+id/remind1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <Spinner
+                    android:id="@+id/remindTime1Spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/deleteRemind1ImageView"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/close" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/remind2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <Spinner
+                    android:id="@+id/remindTime2Spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/deleteRemind2ImageView"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/close" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/remind3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <Spinner
+                    android:id="@+id/remindTime3Spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/deleteRemind3ImageView"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/close" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/remind4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <Spinner
+                    android:id="@+id/remindTime4Spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/deleteRemind4ImageView"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/close" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/remind5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <Spinner
+                    android:id="@+id/remindTime5Spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/deleteRemind5ImageView"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/close" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/addRemindButton"
+                style="@style/button"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="10dp"
+                android:text="添加提醒" />
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/cornerMenuRelativeLayout"
+        layout="@layout/corner_menu" />
+
+</RelativeLayout>

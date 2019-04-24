@@ -167,7 +167,11 @@ public class MainActivity extends AppCompatActivity {
         calendarImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                if (!checkLogin())
+                    return;
+                Intent intent = new Intent(getApplicationContext(),
+                        UserCalendarActivity.class);
+                startActivity(intent);
             }
         });
 
